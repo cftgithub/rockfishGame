@@ -13,6 +13,8 @@ render() {
             <div className="img-container">
                 <img alt={this.props.species} src={this.props.image}/>
             </div>
+            <div>{this.props.species}</div>
+            <div>{this.props.status}</div>
         </div>
     );
 }

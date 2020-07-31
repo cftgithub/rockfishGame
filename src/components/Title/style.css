@@ -1,6 +1,13 @@
 .title {
-    text-align: center;
-    font-family: 'Modak', cursive;
-    font-size: 15vh;
-    margin-bottom: 0;
-  }
+  text-align: center;
+  font-family: 'Modak', cursive;
+  font-size: 15vh;
+  margin-bottom: 0;
+}
+
+.instruction {
+  text-align: center;
+  font-family: 'Modak', cursive;
+  font-size: 6vh;
+  margin-bottom: 0;
+}
