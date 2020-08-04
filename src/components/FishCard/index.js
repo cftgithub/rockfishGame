@@ -28,9 +28,9 @@ function FishCard(props) {
         </div>
         <div className="content">
           <ul>
-            <li>
+            {/* <li>
               <strong>Name:</strong> {props.species}
-            </li>
+            </li> */}
             <li>
               <strong>Status:</strong> {props.status}
             </li>
