@@ -23,8 +23,6 @@ class App extends Component {
   }
 
   releaseFish = () => {
-    // const fish = this.state.fish.map(fish => fish.id === id);
-    // this.setState({ resetFish: fish});
     this.setState({ fish });
     this.setState({clickCount: 0});
     console.log(fish);
@@ -32,13 +30,13 @@ class App extends Component {
 
   catchFish = (id) => {
     if (this.state.clickCount === 6) {
-      // this.setState({ hiCount: this.newHiCount });
       this.newHiCount();
       this.setState({ clickCount: 0 });
       this.setState({ score: 0 });
       alert("You've caught your limit! You scored " + this.state.score + " points!");
       this.setState({ fish });
-    } else {
+    } 
+    else {
       this.state.fish.sort(() => Math.random() - 0.5);
       const fish = this.state.fish.filter(fish => fish.id === id);
       console.log(fish);
@@ -61,12 +59,8 @@ class App extends Component {
       if (fish[0].status === "endangered") {
         alert("You caught a " + fish[0].commonName + ". NOOOOOOOOO! He's endangered!!!");
         this.setState({ score: 0 });
-
-        // this.setState({ clickCount: 0 });
-        // this.setState({resetFish: fish});
-        // console.log(fish);
         this.releaseFish();
-        // this.clickCountToZero();
+        return;
       }
       this.setState({ fish: this.state.fish.filter(fish => fish.id !== id) });
       this.setState({ clickCount: this.state.clickCount + 1 });
@@ -88,7 +82,7 @@ class App extends Component {
           unknown={"Unknown = +10"}
           vulnerable={"Vulnerable = +1"}
           threatened={"Threatened = 0"}
-          endangered={"Endangered = 'Current Score' is confiscated; returns to 0"}
+          endangered={"Endangered = Game Over! Lose your fishing license!"}
           currentScore={"Current Score: " + this.state.score}
           highScore={"High Score: " + this.state.hiCount}
         />
