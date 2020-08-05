@@ -8,91 +8,74 @@ import './App.css';
 class App extends Component {
   state = {
     fish,
-    // filterFish: fish,
+    resetFish: fish,
     score: 0,
+    clickCount: 0,
     hiCount: 0,
     title: "Let's Fish!",
-    instruction: "There are 6 fishes on the 'Good' list. Can you catch them all?"
+    instruction: "Point value for conservation status of each rockfish caught:"
   };
 
-  // increaseScore = () => {
-  //   if(this.state.score < 15) {
-  //     this.setState({ score: this.state.score + 1 })
-  //   } else {
-  //     this.endGame();
-  //   }
-  // };
+  newHiCount = () => {
+    if(this.state.score > this.state.hiCount) {
+      this.setState({ hiCount: this.state.score});
+    };
+  }
 
-  // resetScore = () => {
-  //   if(this.state.score > this.state.hiCount) {
-  //     this.setState({ hiCount: this.state.score })
-  //   };
-  //   this.setState({ score: 0 });
-  // };
-
-  // randomizeCards = () => {
-  //   this.state.fish.sort(() => Math.random() - 0.5);
-  // }
-
-  // endGame = () => {
-  //   this.setState({ score: this.state.score + 1 })
-  //   this.setState({ title: "Fish Catcher!" });
-  //   this.setState({ hiCount: 16 });
-  // }
-
-  // clicker = id => {
-  //   if(this.state.score !== 16) {
-  //   const selected = this.state.fish.filter(fsh => fsh.id === id);
-  //   console.log(selected)
-  //   if(selected[0].clicked === false) {
-  //     this.increaseScore();
-  //     selected[0].clicked = true;
-  //   } else {
-  //     this.resetScore();
-  //     this.state.fish.forEach((fish) => (
-  //       fish.clicked = false
-  //     ));
-  //   }
-  // } else {
-  //     this.resetScore();
-  //     this.state.fish.forEach((fish) => (
-  //       fish.clicked = false
-  //     ));
-  //     this.setState({ title: "Fish Finder" });
-  // }
-  //   this.randomizeCards();
-  // };
+  releaseFish = () => {
+    // const fish = this.state.fish.map(fish => fish.id === id);
+    // this.setState({ resetFish: fish});
+    this.setState({ fish });
+    this.setState({clickCount: 0});
+    console.log(fish);
+  }
 
   catchFish = (id) => {
-    // this.state.fish.sort(() => Math.random() - 0.5);
-    const fish = this.state.fish.filter(fish => fish.id === id);
-    console.log(fish);
-    if (fish[0].status === "good") {
-      alert(fish[0].commonName + " Status: Good; Nice catch!");
-      console.log("YAY");
-      this.setState({ score: this.state.score + 15 })
+    if (this.state.clickCount === 6) {
+      // this.setState({ hiCount: this.newHiCount });
+      this.newHiCount();
+      this.setState({ clickCount: 0 });
+      this.setState({ score: 0 });
+      alert("You've caught your limit! You scored " + this.state.score + " points!");
+      this.setState({ fish });
+    } else {
+      this.state.fish.sort(() => Math.random() - 0.5);
+      const fish = this.state.fish.filter(fish => fish.id === id);
+      console.log(fish);
+      if (fish[0].status === "good") {
+        alert(fish[0].commonName + " Status: Good; Nice catch!");
+        this.setState({ score: this.state.score + 15 });
+      }
+      if (fish[0].status === "unknown") {
+        alert(fish[0].commonName + " Status: Unknown");
+        this.setState({ score: this.state.score + 10 });
+      }
+      if (fish[0].status === "vulnerable") {
+        alert(fish[0].commonName + ": A Vulnerable species. Please follow safe catch and release procedures!");
+        this.setState({ score: this.state.score + 1 });
+      }
+      if (fish[0].status === "threatened") {
+        alert(fish[0].commonName + ": A Threatened species. Please follow safe catch and release procedures!");
+        this.setState({ score: this.state.score + 0 });
+      }
+      if (fish[0].status === "endangered") {
+        alert("You caught a " + fish[0].commonName + ". NOOOOOOOOO! He's endangered!!!");
+        this.setState({ score: 0 });
+
+        // this.setState({ clickCount: 0 });
+        // this.setState({resetFish: fish});
+        // console.log(fish);
+        this.releaseFish();
+        // this.clickCountToZero();
+      }
+      this.setState({ fish: this.state.fish.filter(fish => fish.id !== id) });
+      this.setState({ clickCount: this.state.clickCount + 1 });
+      console.log(this.state.clickCount);
     }
-    if (fish[0].status === "unknown") {
-      alert(fish[0].commonName + " Status: Unknown");
-      console.log("HMMMM");
-      this.setState({ score: this.state.score + 10 })
-    }
-    if (fish[0].status === "vulnerable") {
-      alert(fish[0].commonName + ": A Vulnerable species. Please follow safe catch and release procedures!");
-      console.log("He's vulnerable");
-      this.setState({ score: this.state.score + 1 })
-    }
-    if (fish[0].status === "threatened") {
-      alert(fish[0].commonName + ": A Threatened species. Please follow safe catch and release procedures!");
-      console.log("He's threatened");
-      this.setState({ score: this.state.score + 0 })
-    }
-    if (fish[0].status === "endangered") {
-      alert("You caught a " + fish[0].commonName + ". NOOOOOOOOO! He's endangered!!!");
-      console.log("NOOOOOOOOOO");
-      this.setState({ score: this.state.score - 15 })
-    }
-    this.setState({ fish: this.state.fish.filter(fish => fish.id !==id) });
+  };
+
+  clickCountToZero = () => {
+    this.setState({ clickCount: 0 });
   };
 
   render() {
@@ -101,6 +84,11 @@ class App extends Component {
         <Title
           title={this.state.title}
           instruction={this.state.instruction}
+          good={"Good = +15"}
+          unknown={"Unknown = +10"}
+          vulnerable={"Vulnerable = +1"}
+          threatened={"Threatened = 0"}
+          endangered={"Endangered = 'Current Score' is confiscated; returns to 0"}
           currentScore={"Current Score: " + this.state.score}
           highScore={"High Score: " + this.state.hiCount}
         />

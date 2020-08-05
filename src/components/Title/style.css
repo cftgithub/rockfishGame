@@ -8,6 +8,16 @@
 .instruction {
   text-align: center;
   font-family: 'Modak', cursive;
-  font-size: 6vh;
+  font-size: 5vh;
   margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Modak', cursive;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.row {
+  padding: 5px;
 }

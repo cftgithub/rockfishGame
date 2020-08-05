@@ -8,7 +8,7 @@
     display: inline-block
 }
 
-.score {
+.score, .currScore {
     font-family: 'Modak', cursive;
     font-size: 4vh;
 }

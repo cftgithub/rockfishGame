@@ -21,24 +21,20 @@ import "./style.css";
 // }
 
 function FishCard(props) {
-    return (
-      <div className="card">
-        <div className="img-container">
-          <img alt={props.species} src={props.image} />
-        </div>
-        <div className="content">
-          <ul>
-            {/* <li>
-              <strong>Name:</strong> {props.species}
-            </li> */}
-            <li>
-              <strong>Status:</strong> {props.status}
-            </li>
-          </ul>
-        </div>
-        <span onClick={() => props.removeFish(props.id)} className="remove">𝘅</span>
+  return (
+    <div className="card">
+      <div onClick={() => props.removeFish(props.id)} className="img-container">
+        <img alt={props.species} src={props.image} />
       </div>
-    );
-  }
+      {/* <div className="content">
+        <ul>
+          <li>
+            <strong>Status:</strong> {props.status}
+          </li>
+        </ul>
+      </div> */}
+    </div>
+  );
+}
 
 export default FishCard;
