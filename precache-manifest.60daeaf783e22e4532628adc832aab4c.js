@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "958769ef07f3ef02c89e27037275c9ff",
+    "revision": "897a4c013930449795b38575e66221ed",
     "url": "/rockfishGame/index.html"
   },
   {
-    "revision": "491ba5749efd3ae59816",
-    "url": "/rockfishGame/static/css/main.42069867.chunk.css"
+    "revision": "6b66f14199548455f5f2",
+    "url": "/rockfishGame/static/css/main.5d7c4f70.chunk.css"
   },
   {
     "revision": "29937a567330d3587a38",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rockfishGame/static/js/2.0483c0cc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "491ba5749efd3ae59816",
-    "url": "/rockfishGame/static/js/main.d36aaaf2.chunk.js"
+    "revision": "6b66f14199548455f5f2",
+    "url": "/rockfishGame/static/js/main.981fb89e.chunk.js"
   },
   {
     "revision": "23902c6bfe4b520be4d3",
