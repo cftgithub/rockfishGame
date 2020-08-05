@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/rockfishGame/static/css/main.f6d37992.chunk.css",
-    "main.js": "/rockfishGame/static/js/main.fd3d8461.chunk.js",
-    "main.js.map": "/rockfishGame/static/js/main.fd3d8461.chunk.js.map",
+    "main.css": "/rockfishGame/static/css/main.42069867.chunk.css",
+    "main.js": "/rockfishGame/static/js/main.d36aaaf2.chunk.js",
+    "main.js.map": "/rockfishGame/static/js/main.d36aaaf2.chunk.js.map",
     "runtime-main.js": "/rockfishGame/static/js/runtime-main.ffacef3b.js",
     "runtime-main.js.map": "/rockfishGame/static/js/runtime-main.ffacef3b.js.map",
-    "static/js/2.7d72e063.chunk.js": "/rockfishGame/static/js/2.7d72e063.chunk.js",
-    "static/js/2.7d72e063.chunk.js.map": "/rockfishGame/static/js/2.7d72e063.chunk.js.map",
+    "static/js/2.0483c0cc.chunk.js": "/rockfishGame/static/js/2.0483c0cc.chunk.js",
+    "static/js/2.0483c0cc.chunk.js.map": "/rockfishGame/static/js/2.0483c0cc.chunk.js.map",
     "index.html": "/rockfishGame/index.html",
-    "precache-manifest.14f853fc1154e28b7bdd3bcb2bb02469.js": "/rockfishGame/precache-manifest.14f853fc1154e28b7bdd3bcb2bb02469.js",
+    "precache-manifest.a7726d3893f8ece4c1baed9755b929ef.js": "/rockfishGame/precache-manifest.a7726d3893f8ece4c1baed9755b929ef.js",
     "service-worker.js": "/rockfishGame/service-worker.js",
-    "static/css/main.f6d37992.chunk.css.map": "/rockfishGame/static/css/main.f6d37992.chunk.css.map",
-    "static/js/2.7d72e063.chunk.js.LICENSE.txt": "/rockfishGame/static/js/2.7d72e063.chunk.js.LICENSE.txt"
+    "static/css/main.42069867.chunk.css.map": "/rockfishGame/static/css/main.42069867.chunk.css.map",
+    "static/js/2.0483c0cc.chunk.js.LICENSE.txt": "/rockfishGame/static/js/2.0483c0cc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ffacef3b.js",
-    "static/js/2.7d72e063.chunk.js",
-    "static/css/main.f6d37992.chunk.css",
-    "static/js/main.fd3d8461.chunk.js"
+    "static/js/2.0483c0cc.chunk.js",
+    "static/css/main.42069867.chunk.css",
+    "static/js/main.d36aaaf2.chunk.js"
   ]
 }
