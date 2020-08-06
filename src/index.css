@@ -1,4 +1,10 @@
 body {
   margin: 0;
   background-image: url("https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  padding-bottom: 100px;
 }
