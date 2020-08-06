@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/rockfishGame/static/css/main.5d7c4f70.chunk.css",
-    "main.js": "/rockfishGame/static/js/main.981fb89e.chunk.js",
-    "main.js.map": "/rockfishGame/static/js/main.981fb89e.chunk.js.map",
+    "main.css": "/rockfishGame/static/css/main.53110add.chunk.css",
+    "main.js": "/rockfishGame/static/js/main.976ba515.chunk.js",
+    "main.js.map": "/rockfishGame/static/js/main.976ba515.chunk.js.map",
     "runtime-main.js": "/rockfishGame/static/js/runtime-main.ffacef3b.js",
     "runtime-main.js.map": "/rockfishGame/static/js/runtime-main.ffacef3b.js.map",
     "static/js/2.0483c0cc.chunk.js": "/rockfishGame/static/js/2.0483c0cc.chunk.js",
     "static/js/2.0483c0cc.chunk.js.map": "/rockfishGame/static/js/2.0483c0cc.chunk.js.map",
     "index.html": "/rockfishGame/index.html",
-    "precache-manifest.60daeaf783e22e4532628adc832aab4c.js": "/rockfishGame/precache-manifest.60daeaf783e22e4532628adc832aab4c.js",
+    "precache-manifest.e244b0375a3d4a7d287e15d42f9e214b.js": "/rockfishGame/precache-manifest.e244b0375a3d4a7d287e15d42f9e214b.js",
     "service-worker.js": "/rockfishGame/service-worker.js",
-    "static/css/main.5d7c4f70.chunk.css.map": "/rockfishGame/static/css/main.5d7c4f70.chunk.css.map",
+    "static/css/main.53110add.chunk.css.map": "/rockfishGame/static/css/main.53110add.chunk.css.map",
     "static/js/2.0483c0cc.chunk.js.LICENSE.txt": "/rockfishGame/static/js/2.0483c0cc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ffacef3b.js",
     "static/js/2.0483c0cc.chunk.js",
-    "static/css/main.5d7c4f70.chunk.css",
-    "static/js/main.981fb89e.chunk.js"
+    "static/css/main.53110add.chunk.css",
+    "static/js/main.976ba515.chunk.js"
   ]
 }
