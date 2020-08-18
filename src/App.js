@@ -13,7 +13,7 @@ class App extends Component {
     clickCount: 0,
     hiCount: 0,
     title: "Let's Fish!",
-    instruction: "Point value for conservation status of each rockfish caught:"
+    instruction: "Point value based on status of fish:"
   };
 
   newHiCount = () => {
@@ -57,7 +57,7 @@ class App extends Component {
         this.setState({ score: this.state.score + 0 });
       }
       if (fish[0].status === "endangered") {
-        alert("You caught a " + fish[0].commonName + ". NOOOOOOOOO! He's endangered!!!");
+        alert("You caught a " + fish[0].commonName + ". NOOOOOOOOO! It's endangered!!! You've lost your fishing license.");
         this.setState({ score: 0 });
         this.releaseFish();
         return;
@@ -82,7 +82,7 @@ class App extends Component {
           unknown={"Unknown = +10"}
           vulnerable={"Vulnerable = +1"}
           threatened={"Threatened = 0"}
-          endangered={"Endangered = Game Over! Lose your fishing license!"}
+          endangered={"Endangered = Game Over!"}
           currentScore={"Current Score: " + this.state.score}
           highScore={"High Score: " + this.state.hiCount}
         />

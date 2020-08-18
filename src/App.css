@@ -11,6 +11,9 @@
 .score {
   font-family: 'Modak', cursive;
   font-size: 4vh;
+  color: rgb(10, 37, 63);
+  text-shadow: 1px 1px 10px rgb(193, 197, 199);
+
 }
 
 .wrapper {

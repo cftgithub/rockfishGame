@@ -5,7 +5,7 @@
 }
 
 .currScore, .hiScore {
-    display: inline-block
+    display: inline-block;
 }
 
 .score, .currScore {

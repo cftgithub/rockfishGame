@@ -3,19 +3,27 @@
   font-family: 'Modak', cursive;
   font-size: 15vh;
   margin-bottom: 0;
+  color: rgb(152, 217, 243);
+  text-shadow: 1px 1px 20px rgb(1, 22, 34), 1px 1px 10px rgb(193, 197, 199), 1px 1px 20px rgb(1, 22, 34), 1px 1px 10px rgb(193, 197, 199);
 }
 
 .instruction {
   text-align: center;
   font-family: 'Modak', cursive;
+  /* font-family: 'Merienda One', cursive; */
   font-size: 5vh;
   margin-bottom: 0;
+  color: rgb(10, 37, 63);
+  text-shadow: 1px 1px 10px rgb(193, 197, 199);
 }
 
 h2 {
   font-family: 'Modak', cursive;
+  /* font-family: 'Merienda One', cursive; */
   margin-top: 0px;
   margin-bottom: 0px;
+  color: rgb(10, 37, 63);
+  text-shadow: 1px 1px 10px rgb(193, 197, 199);
 }
 
 .row {
